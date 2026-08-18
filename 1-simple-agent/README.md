@@ -16,8 +16,7 @@
 ├── OpenAICompatibleClient.py   # LLM 客户端封装
 ├── get_weather.py              # 天气查询工具
 ├── get_attraction.py           # 景点推荐工具
-├── config.json                 # API 配置文件（需自行填写）
-├── config_dev.json             # 开发环境配置（示例）
+├── config_example.json         # API 示例配置文件（需自行填写，填写完后重命名为 config.json）
 └── prompt_config.txt           # 系统提示词配置
 ```
 
