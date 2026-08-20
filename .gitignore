@@ -2,3 +2,4 @@
 /.venv/
 .idea/*
 2-agent-tokenization/Qwen1.5-0.5B-Chat/*
+/3-agent-build/.env

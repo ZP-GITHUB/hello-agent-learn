@@ -1,6 +1,7 @@
 # 2-agent-tokenization - LLM Tokenization 示例
 
 本示例演示如何使用 HuggingFace Transformers 库对大型语言模型进行 Tokenization（分词）处理，并生成文本回复。
+参考 [3.2.3 调用开源大语言模型 教程](https://hello-agents.datawhale.cc/#/./chapter3/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E5%9F%BA%E7%A1%80?id=_323-%e8%b0%83%e7%94%a8%e5%bc%80%e6%ba%90%e5%a4%a7%e8%af%ad%e8%a8%80%e6%a8%a1%e5%9e%8b) 实现。
 
 ## 功能
 
