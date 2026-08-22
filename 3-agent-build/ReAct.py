@@ -1,10 +1,15 @@
 import re
+from datetime import datetime
 from llm_client import HelloAgentsLLM
 from tools import ToolExecutor, search
 
-# (此处省略 REACT_PROMPT_TEMPLATE 的定义)
+# ReAct 提示词模板
+# 注意：{current_date} 会在运行时自动填充为当前日期，帮助模型判断"最新"的时间范围
+# {finish_reminder} 会在最后一步时注入强制 Finish 提醒
 REACT_PROMPT_TEMPLATE = """
 请注意，你是一个有能力调用外部工具的智能助手。
+
+当前日期：{current_date}
 
 可用工具如下：
 {tools}
@@ -15,10 +20,12 @@ Thought: 你的思考过程，用于分析问题、拆解任务和规划下一�
 Action: 你决定采取的行动，必须是以下格式之一：
 - `{{tool_name}}[{{tool_input}}]`：调用一个可用工具。
 - `Finish[最终答案]`：当你认为已经获得最终答案时。
-- 当你收集到足够的信息，能够回答用户的最终问题时，你必须在`Action:`字段后使用 `Finish[最终答案]` 来输出最终答案。
 
-重要：一旦你输出了 Action: 字段，必须立即停止生成，不要继续输出任何内容！
-
+重要规则：
+1. 一旦你输出了 Action: 字段，必须立即停止生成，不要继续输出任何内容！
+2. 你最多只能调用 3 次工具。如果已经搜索了 2 次或以上，你必须使用 Finish 输出最终答案，不要再搜索。
+3. 如果历史 Observation 中已经包含了可以回答用户问题的信息，你必须立即使用 Finish，不要继续搜索。
+{finish_reminder}
 
 现在，请开始解决以下问题：
 Question: {question}
@@ -43,7 +50,20 @@ class ReActAgent:
 
             tools_desc = self.tool_executor.getAvailableTools()
             history_str = "\n".join(self.history)
-            prompt = REACT_PROMPT_TEMPLATE.format(tools=tools_desc, question=question, history=history_str)
+            # 获取当前日期，注入到提示词中，帮助模型判断"最新"的时间范围
+            current_date = datetime.now().strftime("%Y年%m月%d日")
+            # 当接近最大步数时，注入强制 Finish 提醒，防止模型继续搜索而不总结
+            if current_step >= self.max_steps - 1:
+                finish_reminder = "\n⚠️ 警告：你已经用完了大部分步骤，这一次你必须使用 Finish[最终答案] 来输出最终答案，绝对不能再调用工具！"
+            else:
+                finish_reminder = ""
+            prompt = REACT_PROMPT_TEMPLATE.format(
+                current_date=current_date,
+                tools=tools_desc,
+                question=question,
+                history=history_str,
+                finish_reminder=finish_reminder
+            )
 
             messages = [{"role": "user", "content": prompt}]
             response_text = self.llm_client.think(messages=messages)
@@ -80,10 +100,16 @@ class ReActAgent:
     def _parse_output(self, text: str):
         # Thought: 匹配到 Action: 或文本末尾
         thought_match = re.search(r"Thought:\s*(.*?)(?=\nAction:|$)", text, re.DOTALL)
-        # Action: 只匹配第一个 Action: 到下一个 Thought:、Action: 或文本末尾（防止模型输出过长导致解析错误）
+        # Action: 只匹配第一个 Action: 到下一个 Thought:、Action: 或文本末尾
         action_match = re.search(r"Action:\s*(.*?)(?=\nThought:|\nAction:|$)", text, re.DOTALL)
         thought = thought_match.group(1).strip() if thought_match else None
-        action = action_match.group(1).strip() if action_match else None
+        if action_match:
+            # 关键修复：只取 Action 的第一行，丢弃模型后续输出的多余内容
+            # 因为 Action 格式永远是一行，如 Search[...] 或 Finish[...]
+            raw_action = action_match.group(1).strip()
+            action = raw_action.split("\n")[0].strip()
+        else:
+            action = None
         return thought, action
 
     def _parse_action(self, action_text: str):
