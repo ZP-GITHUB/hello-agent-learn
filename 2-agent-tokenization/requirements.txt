@@ -1,0 +1,6 @@
+# 2-agent-tokenization 依赖
+# LlmTokenization.py 使用的深度学习框架与模型加载库
+torch
+transformers
+# 可选：从 ModelScope 下载 Qwen1.5-0.5B-Chat 模型时使用
+# modelscope

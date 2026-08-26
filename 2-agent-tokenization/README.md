@@ -14,6 +14,7 @@
 ```
 2-agent-tokenization/
 ├── LlmTokenization.py          # 主程序：Tokenization 与文本生成示例
+├── requirements.txt            # Python 依赖（torch、transformers）
 └── Qwen1.5-0.5B-Chat/          # 本地模型文件（已加入 .gitignore）
     └── models/qwen--Qwen1.5-0.5B-Chat/snapshots/master/
         ├── config.json
@@ -27,7 +28,7 @@
 ### 1. 安装依赖
 
 ```bash
-pip install torch transformers
+pip install -r requirements.txt
 ```
 
 ### 2. 下载模型（可选）

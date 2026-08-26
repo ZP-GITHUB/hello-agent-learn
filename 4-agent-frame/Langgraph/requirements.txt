@@ -1,0 +1,9 @@
+# LangGraph 智能搜索助手依赖
+langgraph==1.0.0a3
+# Dialogue_System.py 直接使用了 langchain_core.messages 中的消息类型，需显式声明
+langchain-core
+langchain_openai==0.3.33
+# 从 .env 加载环境变量
+python-dotenv
+# Tavily 搜索 API 客户端
+tavily-python

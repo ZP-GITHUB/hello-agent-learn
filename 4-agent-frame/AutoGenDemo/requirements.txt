@@ -2,9 +2,11 @@
 autogen-agentchat
 autogen-ext[openai,azure]
 openai>=1.0.0
+# autogen_software_team.py 从 .env 加载环境变量（注意：PyPI 包名是 python-dotenv，不是 dotenv）
+python-dotenv
+# output.py（智能体协作产出的比特币价格应用）的依赖，可用 streamlit run output.py 体验
 streamlit>=1.28.0
 requests>=2.31.0
 pandas>=2.0.0
 plotly>=5.15.0
-asyncio
-dotenv
+# 注：asyncio 为 Python 标准库，无需（也无法）通过 pip 安装

@@ -1,1 +1,6 @@
+# CAMEL 数字电子书协作撰写依赖
 camel-ai==0.2.75
+# DigitalBookWriting.py 使用 Fore 输出彩色文字
+colorama
+# DigitalBookWriting.py 从 .env 加载环境变量（PyPI 包名为 python-dotenv）
+python-dotenv

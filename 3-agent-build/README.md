@@ -23,6 +23,7 @@
 ├── Plan_and_solve.py      # Plan-and-Solve 智能体实现
 ├── .env                   # 环境变量配置（API 密钥等，已加入 .gitignore）
 ├── .env_example           # 环境变量示例文件
+├── requirements.txt       # Python 依赖（openai、python-dotenv、serpapi）
 └── README.md              # 本文件
 ```
 
@@ -31,7 +32,7 @@
 ### 1. 安装依赖
 
 ```bash
-pip install openai python-dotenv serpapi
+pip install -r requirements.txt
 ```
 
 ### 2. 配置环境变量

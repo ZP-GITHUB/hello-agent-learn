@@ -1,0 +1,7 @@
+# 1-simple-agent 依赖
+# SimpleAgent.py / OpenAICompatibleClient.py 使用的 LLM 客户端
+openai
+# get_weather.py 调用 wttr.in 天气 API 使用的 HTTP 库
+requests
+# get_attraction.py 调用 Tavily 搜索 API 使用的客户端
+tavily-python

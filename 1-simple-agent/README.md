@@ -17,7 +17,8 @@
 ├── get_weather.py              # 天气查询工具
 ├── get_attraction.py           # 景点推荐工具
 ├── config_example.json         # API 示例配置文件（需自行填写，填写完后重命名为 config.json）
-└── prompt_config.txt           # 系统提示词配置
+├── prompt_config.txt           # 系统提示词配置
+└── requirements.txt            # Python 依赖（openai、requests、tavily-python）
 ```
 
 ## 快速开始
@@ -25,7 +26,7 @@
 ### 1. 安装依赖
 
 ```bash
-pip install openai requests tavily-python
+pip install -r requirements.txt
 ```
 
 ### 2. 配置 API 密钥
