@@ -8,3 +8,5 @@
 /4-agent-frame/AgentScopeDemo/.env
 /4-agent-frame/CAMEL/.env
 /4-agent-frame/Langgraph/.env
+/5-agent-myframe/.env
+__pycache__/
