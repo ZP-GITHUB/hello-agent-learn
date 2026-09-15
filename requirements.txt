@@ -1,0 +1,126 @@
+# ============================================================================
+# hello-agent-learn 全工作区统一依赖清单（第 1–6 章）
+#
+# 适用环境：Python 3.12（必须是 3.12+，见下方说明）
+# 安装（在项目根目录执行）：
+#   .venv/Scripts/python.exe -m pip install -r requirements.txt
+#
+# 【为什么必须 Python 3.12】
+#   numpy==2.5.3 要求 >=3.12，pandas==3.0.5 / scikit-learn==1.9.1 要求 >=3.11。
+#   原先根目录的 Python 3.10 环境装不上这三个包（实测 pip 直接报
+#   "Could not find a version that satisfies the requirement scikit-learn==1.9.1"）。
+#
+# 说明：本清单只列【直接依赖】并锁定精确版本，传递依赖交由 pip 解析。
+#       若需要完全一致的传递依赖快照，执行：
+#   .venv/Scripts/python.exe -m pip freeze > requirements.lock.txt
+#
+# 注意：第 4 章的四个对比框架演示（AgentScope / AutoGen / CAMEL / LangGraph）
+#       依赖另见 requirements-frameworks.txt，本文件不含。
+# ============================================================================
+
+# torch 的 CPU 版带本地版本后缀（+cpu），只存在于 PyTorch 官方 CPU 索引，必须加这行
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+
+# ---------------------------------------------------------------------------
+# 1. 框架本体（第 5、6 章需要）
+# ---------------------------------------------------------------------------
+# PyPI 上 hello-agents 最新已是 1.0.0，API 与本书示例不兼容，必须锁 0.2.9。
+# 从 0.1.1 升到 0.2.9 不会破坏第 5 章代码——实测 ToolRegistry / HelloAgentsLLM /
+# SimpleAgent / ReActAgent / ReflectionAgent / PlanAndSolveAgent / Config / Message /
+# CalculatorTool / Planner / Executor 在 0.2.9 下全部存在（0.2.9 是 0.1.1 的超集）。
+#
+# 为什么不带 [all] / [memory,rag] extras：
+#   - [all] 会展开出 rl 组（trl/bitsandbytes/wandb/tensorboard 等，约 1-2 GB，
+#     是第 11 章 RL 训练才用的），其中 torch>=2.0.0 无 CPU 标记会覆盖 CPU 版 torch，
+#     evaluation 组的 gradio<5.0.0 还会把 gradio 降级到 4.x —— 千万别装；
+#   - 本清单下方已显式列出所需的全部依赖且版本更精确，extras 完全不需要。
+hello-agents==0.2.9
+
+
+# ---------------------------------------------------------------------------
+# 2. 数据库客户端（第 6 章记忆类示例 01/02/06/08/09/11 必需）
+# ---------------------------------------------------------------------------
+# 关键：qdrant-client 必须 <1.16.0。
+# 框架 hello_agents/memory/storage/qdrant_store.py 仍在 import SearchRequest，
+# 该类在 1.16.0 被移除；而框架用 except ImportError 静默吞掉导入异常，最终会报出
+# 极具误导性的 "qdrant-client未安装"。实测 1.15.1 可用，且服务端镜像需同档。
+qdrant-client==1.15.1
+neo4j==6.3.0
+
+
+# ---------------------------------------------------------------------------
+# 3. 嵌入模型（第 6 章 EMBED_MODEL_TYPE=local 时必需，负责语义检索的向量化）
+# ---------------------------------------------------------------------------
+# 若改用 EMBED_MODEL_TYPE=dashscope 走云端 embedding，本组可整体删除，
+# 环境体积能减少约 620 MB。
+sentence-transformers==6.0.1
+transformers==5.17.0
+torch==2.14.0+cpu
+
+
+# ---------------------------------------------------------------------------
+# 4. NLP 实体抽取（第 6 章示例 09 用；不装仅打印告警，不影响运行）
+# ---------------------------------------------------------------------------
+# spaCy 语言模型不是标准 pip 包，只能用官方 release 的 wheel 直链安装。
+#
+# ⚠️ 国内网络提示：这两个 wheel 托管在 github.com 的 release 上，直连极易超时
+#    （实测 48 MB 的 zh 模型反复 ReadTimeoutError 十几分钟下不完）。若卡住，
+#    在直链前加一个 GitHub 代理前缀手动下载，再用本地文件安装：
+#      curl -L -o zh_core_web_sm-3.8.0-py3-none-any.whl \
+#        https://ghproxy.net/https://github.com/explosion/spacy-models/releases/download/zh_core_web_sm-3.8.0/zh_core_web_sm-3.8.0-py3-none-any.whl
+#      .venv/Scripts/python.exe -m pip install ./zh_core_web_sm-3.8.0-py3-none-any.whl
+#    注意：文件名必须是标准的 wheel 命名（包名-版本-py3-none-any.whl），
+#    改名成 _zh.whl 之类会让 pip 报 "Invalid wheel filename"。
+#    下载后可用 sha256sum 对照 R2 的 #sha256= 值校验完整性。
+spacy==3.8.16
+zh_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/zh_core_web_sm-3.8.0/zh_core_web_sm-3.8.0-py3-none-any.whl#sha256=7de3bd267176b9b2a8defb6997c1cd296da16c57b5e712f72ea44a51755421c8
+en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl#sha256=1932429db727d4bff3deed6b34cfc05df17794f4a52eeb26cf8928f7c1a0fb85
+
+
+# ---------------------------------------------------------------------------
+# 5. RAG 文档解析（第 6 章示例 04/05/07/10/11 用）
+# ---------------------------------------------------------------------------
+# markitdown 必须带 [pdf] extra：裸装 markitdown==0.1.7 不含 PDF 解析器，
+# 而框架会静默降级成"按纯文本直读"——PDF 二进制会被当正文入库（乱码），
+# 且 load_document() 仍返回"加载成功"，问题极难发现。见 README 坑位 #20。
+markitdown[pdf]==0.1.7
+pypdf==6.18.1
+pdfminer.six==20260107
+pdfplumber==0.11.10
+
+
+# ---------------------------------------------------------------------------
+# 6. 基础科学与工具库
+# ---------------------------------------------------------------------------
+scikit-learn==1.9.1
+numpy==2.5.3
+pandas==3.0.5
+python-dotenv==1.2.3
+
+# 框架自身的基础依赖（随 hello-agents 一并装上，此处显式列出以便版本可见）
+openai==1.109.1
+requests==2.34.2
+pydantic==2.13.5
+beautifulsoup4==4.15.0
+networkx==3.6.1
+tiktoken==0.14.0
+
+
+# ---------------------------------------------------------------------------
+# 7. Web 界面（第 6 章示例 11_Q&A_Assistant.py 用，不需要可删）
+# ---------------------------------------------------------------------------
+gradio==6.27.0
+
+
+# ---------------------------------------------------------------------------
+# 8. 联网搜索工具（第 1 章 / 第 3 章 / 第 5 章示例）
+# ---------------------------------------------------------------------------
+tavily-python==0.7.26
+serpapi==1.1.0
+
+
+# ---------------------------------------------------------------------------
+# 9. 可选：云端 Embedding（第 6 章 EMBED_MODEL_TYPE=dashscope 时需要）
+# ---------------------------------------------------------------------------
+# dashscope>=1.20.0

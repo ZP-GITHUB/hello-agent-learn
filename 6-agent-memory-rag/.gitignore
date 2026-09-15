@@ -1,0 +1,21 @@
+# 本目录是第八章示例的本地运行环境，以下内容不应提交
+.venv/
+.env
+
+# 本地模型目录（约 1.3GB，从 C 盘 HF 缓存迁移而来，勿提交）
+huggingface-models/
+
+# 示例运行时产物（SQLite 文档库、RAG 知识库目录）
+memory_data/
+*_kb/
+code/memory_data/
+code/*_kb/
+
+# RAGTool 的默认知识库目录（未显式传 knowledge_base_path 时自动创建）
+knowledge_base/
+
+# 教程配套教材（20MB，第三方版权，本地自备即可，勿提交）
+Happy-LLM-0727.pdf
+
+__pycache__/
+*.pyc
