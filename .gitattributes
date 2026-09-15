@@ -1,0 +1,48 @@
+# ---------------------------------------------------------------------------
+# 行尾统一策略
+#
+# 背景：本机 git 配置了 core.autocrlf=true（Windows 默认），若不加约束，
+# 检出的 .sh / .py / .md 会带 CRLF，导致：
+#   - shell 脚本在 WSL / Git Bash 下报 `$'\r': command not found` 或 bad interpreter
+#   - 跨平台协作时整行 diff 变化，掩盖真实改动
+# 结论：仓库内一律存 LF，检出也保持 LF（eol=lf 会覆盖 core.autocrlf 行为）。
+# ---------------------------------------------------------------------------
+* text=auto eol=lf
+
+# 可执行脚本尤其敏感：WSL 下必须 LF
+*.sh   text eol=lf
+*.bash text eol=lf
+
+# 源码与文档
+*.py   text eol=lf
+*.md   text eol=lf
+*.txt  text eol=lf
+*.toml text eol=lf
+*.yaml text eol=lf
+*.yml  text eol=lf
+*.json text eol=lf
+*.cfg  text eol=lf
+*.ini  text eol=lf
+
+# Windows 专用脚本例外：cmd / PowerShell 需要 CRLF
+*.bat  text eol=crlf
+*.cmd  text eol=crlf
+*.ps1  text eol=crlf
+
+# 二进制文件：禁止任何行尾/编码转换
+*.pdf   binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.db    binary
+*.sqlite binary
+*.onnx  binary
+*.bin   binary
+*.safetensors binary
+*.whl   binary
+
+# 归并策略：这些文件冲突时以本分支为准，避免逐行人工解决
+package-lock.json merge=binary
+*.lock            merge=binary
