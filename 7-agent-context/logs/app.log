@@ -1,0 +1,420 @@
+2024-01-19 14:01:22 ERROR ExternalAPIError: upstream returned HTTP 503
+2024-01-19 14:02:15 INFO  worker - Database query completed in 42ms
+2024-01-19 14:03:12 INFO  app - Cache hit for key user:profile
+2024-01-19 14:05:00 INFO  app - User login succeeded
+2024-01-19 14:06:20 INFO  api - Scheduled job 'daily_report' finished
+2024-01-19 14:07:28 ERROR TimeoutError: upstream call exceeded 5000ms
+2024-01-19 14:08:30 INFO  worker - User login succeeded
+2024-01-19 14:09:52 WARNING db - Deprecated endpoint /api/v1/orders called
+2024-01-19 14:11:24 INFO  worker - Request handled successfully
+2024-01-19 14:13:10 INFO  api - Cache hit for key user:profile
+2024-01-19 14:13:57 WARNING db - Slow query detected (1.8s)
+2024-01-19 14:15:28 INFO  app - Cache hit for key user:profile
+2024-01-19 14:16:26 WARNING db - Response payload exceeds 1MB
+2024-01-19 14:17:11 INFO  app - Scheduled job 'daily_report' finished
+2024-01-19 14:18:27 INFO  db - Scheduled job 'daily_report' finished
+2024-01-19 14:19:14 INFO  worker - Config reloaded from config/app.json
+2024-01-19 14:20:02 INFO  db - Scheduled job 'daily_report' finished
+2024-01-19 14:21:03 INFO  app - Scheduled job 'daily_report' started
+2024-01-19 14:22:49 ERROR AuthenticationError: invalid bearer token for client C0017
+2024-01-19 14:23:39 INFO  worker - User login succeeded
+2024-01-19 14:24:23 INFO  api - Scheduled job 'daily_report' started
+2024-01-19 14:25:30 INFO  db - Request handled successfully
+2024-01-19 14:27:03 INFO  worker - Scheduled job 'daily_report' finished
+2024-01-19 14:27:53 INFO  app - Scheduled job 'daily_report' started
+2024-01-19 14:29:02 ERROR DatabaseConnectionError: connection to db-primary:5432 refused
+2024-01-19 14:30:36 INFO  api - Cache hit for key user:profile
+2024-01-19 14:31:17 INFO  api - Config reloaded from config/app.json
+2024-01-19 14:32:26 INFO  app - Scheduled job 'daily_report' started
+2024-01-19 14:33:48 INFO  app - User login succeeded
+2024-01-19 14:35:36 INFO  db - User login succeeded
+2024-01-19 14:36:39 INFO  worker - User login succeeded
+2024-01-19 14:37:47 INFO  worker - User login succeeded
+2024-01-19 14:38:30 INFO  api - Scheduled job 'daily_report' finished
+2024-01-19 14:39:40 INFO  app - Scheduled job 'daily_report' started
+2024-01-19 14:41:14 INFO  api - Config reloaded from config/app.json
+2024-01-19 14:42:50 INFO  app - Request handled successfully
+2024-01-19 14:43:30 WARNING db - Deprecated endpoint /api/v1/orders called
+2024-01-19 14:44:31 WARNING db - Slow query detected (1.8s)
+2024-01-19 14:45:57 INFO  app - Database query completed in 42ms
+2024-01-19 14:46:55 INFO  api - Scheduled job 'daily_report' finished
+2024-01-19 14:48:30 INFO  worker - Request handled successfully
+2024-01-19 14:50:09 ERROR ValidationError: field 'email' failed format check
+2024-01-19 14:51:28 ERROR ValidationError: field 'email' failed format check
+2024-01-19 14:52:21 WARNING db - Deprecated endpoint /api/v1/orders called
+2024-01-19 14:54:05 INFO  worker - Request handled successfully
+2024-01-19 14:55:19 WARNING db - Response payload exceeds 1MB
+2024-01-19 14:56:28 INFO  worker - Scheduled job 'daily_report' started
+2024-01-19 14:57:19 INFO  app - Config reloaded from config/app.json
+2024-01-19 14:58:59 ERROR AuthenticationError: invalid bearer token for client C0017
+2024-01-19 15:00:28 INFO  worker - Scheduled job 'daily_report' started
+2024-01-19 15:02:06 INFO  api - Request handled successfully
+2024-01-19 15:03:44 INFO  db - Scheduled job 'daily_report' finished
+2024-01-19 15:05:07 INFO  worker - Scheduled job 'daily_report' finished
+2024-01-19 15:06:06 INFO  api - User login succeeded
+2024-01-19 15:07:12 INFO  api - Request handled successfully
+2024-01-19 15:08:47 WARNING api - Response payload exceeds 1MB
+2024-01-19 15:09:27 INFO  app - Request handled successfully
+2024-01-19 15:11:08 WARNING app - Slow query detected (1.8s)
+2024-01-19 15:12:09 INFO  api - Scheduled job 'daily_report' started
+2024-01-19 15:13:56 INFO  api - Database query completed in 42ms
+2024-01-19 15:15:23 INFO  worker - Request handled successfully
+2024-01-19 15:16:46 INFO  app - Scheduled job 'daily_report' started
+2024-01-19 15:17:27 INFO  api - User login succeeded
+2024-01-19 15:18:10 INFO  api - Database query completed in 42ms
+2024-01-19 15:19:32 INFO  db - Database query completed in 42ms
+2024-01-19 15:20:20 WARNING app - Deprecated endpoint /api/v1/orders called
+2024-01-19 15:21:50 ERROR AuthenticationError: invalid bearer token for client C0017
+2024-01-19 15:23:15 INFO  worker - Cache hit for key user:profile
+2024-01-19 15:24:59 WARNING db - Connection pool usage at 85%
+2024-01-19 15:25:40 WARNING api - Deprecated endpoint /api/v1/orders called
+2024-01-19 15:27:07 INFO  worker - Config reloaded from config/app.json
+2024-01-19 15:28:17 WARNING app - Slow query detected (1.8s)
+2024-01-19 15:29:31 INFO  db - Request handled successfully
+2024-01-19 15:30:39 ERROR ValidationError: field 'email' failed format check
+2024-01-19 15:32:21 INFO  api - Database query completed in 42ms
+2024-01-19 15:33:13 WARNING db - Connection pool usage at 85%
+2024-01-19 15:34:19 WARNING db - Deprecated endpoint /api/v1/orders called
+2024-01-19 15:35:57 WARNING api - Connection pool usage at 85%
+2024-01-19 15:36:38 WARNING api - Retry 1/3 for external payment API
+2024-01-19 15:37:31 INFO  app - Database query completed in 42ms
+2024-01-19 15:38:21 ERROR DatabaseConnectionError: connection to db-primary:5432 refused
+2024-01-19 15:40:06 INFO  app - Scheduled job 'daily_report' finished
+2024-01-19 15:40:52 INFO  db - Config reloaded from config/app.json
+2024-01-19 15:41:52 ERROR TimeoutError: upstream call exceeded 5000ms
+2024-01-19 15:42:48 ERROR ValidationError: field 'email' failed format check
+2024-01-19 15:43:35 INFO  api - Request handled successfully
+2024-01-19 15:45:18 INFO  db - Request handled successfully
+2024-01-19 15:46:12 INFO  db - User login succeeded
+2024-01-19 15:47:43 INFO  worker - Scheduled job 'daily_report' started
+2024-01-19 15:49:25 INFO  app - Request handled successfully
+2024-01-19 15:50:49 INFO  worker - Database query completed in 42ms
+2024-01-19 15:51:45 ERROR DatabaseConnectionError: connection to db-primary:5432 refused
+2024-01-19 15:52:57 INFO  app - User login succeeded
+2024-01-19 15:54:30 INFO  app - Scheduled job 'daily_report' started
+2024-01-19 15:56:06 WARNING app - Deprecated endpoint /api/v1/orders called
+2024-01-19 15:57:35 INFO  db - Config reloaded from config/app.json
+2024-01-19 15:59:20 INFO  worker - Scheduled job 'daily_report' finished
+2024-01-19 16:00:04 WARNING api - Retry 1/3 for external payment API
+2024-01-19 16:01:38 ERROR ValidationError: field 'email' failed format check
+2024-01-19 16:02:42 INFO  api - Request handled successfully
+2024-01-19 16:04:16 INFO  app - Database query completed in 42ms
+2024-01-19 16:05:41 WARNING api - Response payload exceeds 1MB
+2024-01-19 16:06:41 INFO  app - Config reloaded from config/app.json
+2024-01-19 16:08:28 INFO  api - Request handled successfully
+2024-01-19 16:09:43 INFO  db - Scheduled job 'daily_report' finished
+2024-01-19 16:10:34 WARNING api - Deprecated endpoint /api/v1/orders called
+2024-01-19 16:11:18 INFO  db - Scheduled job 'daily_report' finished
+2024-01-19 16:12:18 INFO  db - Cache hit for key user:profile
+2024-01-19 16:13:46 WARNING db - Slow query detected (1.8s)
+2024-01-19 16:14:36 INFO  db - Scheduled job 'daily_report' started
+2024-01-19 16:15:32 INFO  app - Database query completed in 42ms
+2024-01-19 16:17:01 INFO  db - Scheduled job 'daily_report' finished
+2024-01-19 16:17:56 INFO  api - Database query completed in 42ms
+2024-01-19 16:18:46 WARNING api - Connection pool usage at 85%
+2024-01-19 16:20:22 INFO  app - User login succeeded
+2024-01-19 16:21:38 INFO  app - Scheduled job 'daily_report' started
+2024-01-19 16:22:25 WARNING db - Slow query detected (1.8s)
+2024-01-19 16:23:33 INFO  app - Scheduled job 'daily_report' finished
+2024-01-19 16:24:32 INFO  app - Cache hit for key user:profile
+2024-01-19 16:26:20 ERROR ExternalAPIError: upstream returned HTTP 503
+2024-01-19 16:27:40 INFO  worker - Request handled successfully
+2024-01-19 16:28:27 ERROR ValidationError: field 'email' failed format check
+2024-01-19 16:29:25 INFO  app - Scheduled job 'daily_report' started
+2024-01-19 16:30:29 INFO  api - Scheduled job 'daily_report' started
+2024-01-19 16:31:23 WARNING api - Retry 1/3 for external payment API
+2024-01-19 16:32:31 ERROR ExternalAPIError: upstream returned HTTP 503
+2024-01-19 16:33:13 WARNING app - Response payload exceeds 1MB
+2024-01-19 16:34:33 INFO  worker - Cache hit for key user:profile
+2024-01-19 16:35:37 INFO  api - Request handled successfully
+2024-01-19 16:36:30 INFO  api - Database query completed in 42ms
+2024-01-19 16:37:17 INFO  app - Config reloaded from config/app.json
+2024-01-19 16:38:05 INFO  api - Config reloaded from config/app.json
+2024-01-19 16:39:41 INFO  worker - Database query completed in 42ms
+2024-01-19 16:41:12 WARNING app - Connection pool usage at 85%
+2024-01-19 16:42:45 INFO  app - Scheduled job 'daily_report' finished
+2024-01-19 16:43:38 WARNING db - Connection pool usage at 85%
+2024-01-19 16:44:46 INFO  worker - Scheduled job 'daily_report' finished
+2024-01-19 16:46:14 INFO  app - Config reloaded from config/app.json
+2024-01-19 16:47:37 INFO  api - Scheduled job 'daily_report' finished
+2024-01-19 16:48:34 INFO  api - Request handled successfully
+2024-01-19 16:50:07 INFO  api - Request handled successfully
+2024-01-19 16:51:01 INFO  worker - User login succeeded
+2024-01-19 16:52:46 INFO  db - Scheduled job 'daily_report' started
+2024-01-19 16:54:27 INFO  db - Scheduled job 'daily_report' finished
+2024-01-19 16:55:28 INFO  db - Scheduled job 'daily_report' started
+2024-01-19 16:56:55 INFO  app - Scheduled job 'daily_report' started
+2024-01-19 16:58:11 INFO  db - Scheduled job 'daily_report' started
+2024-01-19 16:59:24 WARNING db - Deprecated endpoint /api/v1/orders called
+2024-01-19 17:01:05 INFO  app - Config reloaded from config/app.json
+2024-01-19 17:01:51 INFO  app - Request handled successfully
+2024-01-19 17:02:56 INFO  worker - Cache hit for key user:profile
+2024-01-19 17:04:26 INFO  api - Scheduled job 'daily_report' started
+2024-01-19 17:05:09 ERROR DatabaseConnectionError: connection to db-primary:5432 refused
+2024-01-19 17:06:00 INFO  app - Config reloaded from config/app.json
+2024-01-19 17:07:14 ERROR TimeoutError: upstream call exceeded 5000ms
+2024-01-19 17:08:41 WARNING db - Slow query detected (1.8s)
+2024-01-19 17:10:24 WARNING app - Slow query detected (1.8s)
+2024-01-19 17:11:08 WARNING db - Deprecated endpoint /api/v1/orders called
+2024-01-19 17:12:57 INFO  api - Config reloaded from config/app.json
+2024-01-19 17:13:43 INFO  api - Config reloaded from config/app.json
+2024-01-19 17:15:11 INFO  db - Scheduled job 'daily_report' started
+2024-01-19 17:16:39 WARNING api - Response payload exceeds 1MB
+2024-01-19 17:18:08 INFO  app - Request handled successfully
+2024-01-19 17:19:07 ERROR AuthenticationError: invalid bearer token for client C0017
+2024-01-19 17:20:41 INFO  db - Request handled successfully
+2024-01-19 17:21:30 INFO  db - Scheduled job 'daily_report' finished
+2024-01-19 17:23:02 INFO  worker - Database query completed in 42ms
+2024-01-19 17:24:42 WARNING db - Slow query detected (1.8s)
+2024-01-19 17:26:14 ERROR ValidationError: field 'email' failed format check
+2024-01-19 17:27:32 WARNING api - Connection pool usage at 85%
+2024-01-19 17:28:39 INFO  worker - Scheduled job 'daily_report' finished
+2024-01-19 17:30:10 INFO  worker - Scheduled job 'daily_report' finished
+2024-01-19 17:31:41 INFO  api - Request handled successfully
+2024-01-19 17:33:31 INFO  db - Database query completed in 42ms
+2024-01-19 17:34:30 ERROR ValidationError: field 'email' failed format check
+2024-01-19 17:35:37 ERROR DatabaseConnectionError: connection to db-primary:5432 refused
+2024-01-19 17:37:12 INFO  app - Config reloaded from config/app.json
+2024-01-19 17:38:41 INFO  db - Cache hit for key user:profile
+2024-01-19 17:39:52 ERROR AuthenticationError: invalid bearer token for client C0017
+2024-01-19 17:40:38 INFO  app - Config reloaded from config/app.json
+2024-01-19 17:42:23 INFO  app - Request handled successfully
+2024-01-19 17:43:52 INFO  db - Scheduled job 'daily_report' finished
+2024-01-19 17:45:01 WARNING app - Deprecated endpoint /api/v1/orders called
+2024-01-19 17:46:23 INFO  worker - Scheduled job 'daily_report' started
+2024-01-19 17:48:13 INFO  app - Scheduled job 'daily_report' finished
+2024-01-19 17:49:34 WARNING api - Slow query detected (1.8s)
+2024-01-19 17:51:02 INFO  worker - User login succeeded
+2024-01-19 17:52:52 INFO  app - Scheduled job 'daily_report' started
+2024-01-19 17:54:40 INFO  app - Config reloaded from config/app.json
+2024-01-19 17:55:31 INFO  db - Config reloaded from config/app.json
+2024-01-19 17:56:54 INFO  api - Config reloaded from config/app.json
+2024-01-19 17:57:54 WARNING db - Slow query detected (1.8s)
+2024-01-19 17:59:43 INFO  app - Request handled successfully
+2024-01-19 18:01:03 INFO  api - Scheduled job 'daily_report' started
+2024-01-19 18:02:34 INFO  app - Database query completed in 42ms
+2024-01-19 18:03:48 INFO  worker - User login succeeded
+2024-01-19 18:04:39 INFO  worker - Database query completed in 42ms
+2024-01-19 18:05:19 INFO  db - Request handled successfully
+2024-01-19 18:07:01 INFO  app - Config reloaded from config/app.json
+2024-01-19 18:08:19 WARNING db - Response payload exceeds 1MB
+2024-01-19 18:10:09 INFO  api - Config reloaded from config/app.json
+2024-01-19 18:11:04 ERROR ValidationError: field 'email' failed format check
+2024-01-19 18:12:11 INFO  app - Request handled successfully
+2024-01-19 18:13:30 WARNING app - Slow query detected (1.8s)
+2024-01-19 18:14:26 WARNING api - Response payload exceeds 1MB
+2024-01-19 18:15:23 WARNING app - Response payload exceeds 1MB
+2024-01-19 18:16:58 INFO  api - Scheduled job 'daily_report' finished
+2024-01-19 18:17:57 ERROR AuthenticationError: invalid bearer token for client C0017
+2024-01-19 18:19:08 INFO  api - Scheduled job 'daily_report' started
+2024-01-19 18:20:33 WARNING db - Deprecated endpoint /api/v1/orders called
+2024-01-19 18:21:58 WARNING db - Retry 1/3 for external payment API
+2024-01-19 18:23:47 INFO  api - Cache hit for key user:profile
+2024-01-19 18:24:58 INFO  api - Scheduled job 'daily_report' started
+2024-01-19 18:25:55 INFO  worker - Request handled successfully
+2024-01-19 18:27:43 INFO  worker - User login succeeded
+2024-01-19 18:28:56 INFO  worker - Scheduled job 'daily_report' started
+2024-01-19 18:29:59 INFO  db - Cache hit for key user:profile
+2024-01-19 18:31:24 INFO  db - Request handled successfully
+2024-01-19 18:32:54 WARNING app - Response payload exceeds 1MB
+2024-01-19 18:34:22 INFO  worker - Scheduled job 'daily_report' started
+2024-01-19 18:35:20 INFO  app - User login succeeded
+2024-01-19 18:36:11 INFO  app - Config reloaded from config/app.json
+2024-01-19 18:37:16 ERROR TimeoutError: upstream call exceeded 5000ms
+2024-01-19 18:38:40 INFO  app - Cache hit for key user:profile
+2024-01-19 18:40:12 INFO  app - Scheduled job 'daily_report' finished
+2024-01-19 18:41:37 INFO  api - User login succeeded
+2024-01-19 18:43:21 WARNING db - Slow query detected (1.8s)
+2024-01-19 18:45:01 INFO  app - Request handled successfully
+2024-01-19 18:46:03 ERROR TimeoutError: upstream call exceeded 5000ms
+2024-01-19 18:47:26 WARNING db - Connection pool usage at 85%
+2024-01-19 18:48:34 INFO  worker - Scheduled job 'daily_report' finished
+2024-01-19 18:49:58 INFO  db - Config reloaded from config/app.json
+2024-01-19 18:50:49 INFO  api - Config reloaded from config/app.json
+2024-01-19 18:52:31 WARNING db - Connection pool usage at 85%
+2024-01-19 18:53:22 INFO  db - Database query completed in 42ms
+2024-01-19 18:55:03 INFO  app - Scheduled job 'daily_report' finished
+2024-01-19 18:56:08 ERROR ExternalAPIError: upstream returned HTTP 503
+2024-01-19 18:57:08 INFO  db - Database query completed in 42ms
+2024-01-19 18:58:38 INFO  db - Config reloaded from config/app.json
+2024-01-19 18:59:33 INFO  worker - Request handled successfully
+2024-01-19 19:00:35 INFO  db - User login succeeded
+2024-01-19 19:01:38 INFO  worker - Scheduled job 'daily_report' started
+2024-01-19 19:03:23 ERROR ValidationError: field 'email' failed format check
+2024-01-19 19:04:32 ERROR AuthenticationError: invalid bearer token for client C0017
+2024-01-19 19:05:58 WARNING api - Slow query detected (1.8s)
+2024-01-19 19:07:08 INFO  db - Cache hit for key user:profile
+2024-01-19 19:08:10 INFO  worker - Request handled successfully
+2024-01-19 19:09:20 INFO  db - Scheduled job 'daily_report' finished
+2024-01-19 19:10:58 INFO  worker - Database query completed in 42ms
+2024-01-19 19:11:43 INFO  app - Request handled successfully
+2024-01-19 19:12:28 INFO  db - Database query completed in 42ms
+2024-01-19 19:13:57 INFO  worker - Config reloaded from config/app.json
+2024-01-19 19:14:40 INFO  worker - Scheduled job 'daily_report' finished
+2024-01-19 19:16:21 INFO  api - Cache hit for key user:profile
+2024-01-19 19:17:36 INFO  db - Cache hit for key user:profile
+2024-01-19 19:19:02 INFO  db - Scheduled job 'daily_report' finished
+2024-01-19 19:20:18 INFO  api - Scheduled job 'daily_report' finished
+2024-01-19 19:21:42 INFO  api - Config reloaded from config/app.json
+2024-01-19 19:22:49 INFO  api - Cache hit for key user:profile
+2024-01-19 19:23:41 WARNING api - Slow query detected (1.8s)
+2024-01-19 19:24:22 INFO  api - Scheduled job 'daily_report' finished
+2024-01-19 19:25:58 INFO  api - Scheduled job 'daily_report' started
+2024-01-19 19:27:45 WARNING db - Deprecated endpoint /api/v1/orders called
+2024-01-19 19:28:39 INFO  app - Request handled successfully
+2024-01-19 19:29:23 INFO  api - Cache hit for key user:profile
+2024-01-19 19:31:07 WARNING api - Response payload exceeds 1MB
+2024-01-19 19:32:37 INFO  api - Scheduled job 'daily_report' finished
+2024-01-19 19:33:24 WARNING db - Connection pool usage at 85%
+2024-01-19 19:34:08 INFO  api - Request handled successfully
+2024-01-19 19:35:28 INFO  api - Config reloaded from config/app.json
+2024-01-19 19:36:52 WARNING db - Slow query detected (1.8s)
+2024-01-19 19:38:17 INFO  db - Config reloaded from config/app.json
+2024-01-19 19:39:07 WARNING app - Connection pool usage at 85%
+2024-01-19 19:40:28 INFO  worker - User login succeeded
+2024-01-19 19:42:01 WARNING db - Retry 1/3 for external payment API
+2024-01-19 19:43:18 INFO  worker - Config reloaded from config/app.json
+2024-01-19 19:44:54 INFO  worker - Database query completed in 42ms
+2024-01-19 19:46:05 INFO  app - Scheduled job 'daily_report' finished
+2024-01-19 19:47:48 INFO  db - Config reloaded from config/app.json
+2024-01-19 19:49:37 WARNING db - Retry 1/3 for external payment API
+2024-01-19 19:50:31 WARNING app - Deprecated endpoint /api/v1/orders called
+2024-01-19 19:51:16 ERROR DatabaseConnectionError: connection to db-primary:5432 refused
+2024-01-19 19:53:04 INFO  db - Cache hit for key user:profile
+2024-01-19 19:54:20 INFO  app - Cache hit for key user:profile
+2024-01-19 19:56:00 INFO  worker - Config reloaded from config/app.json
+2024-01-19 19:56:41 INFO  app - Cache hit for key user:profile
+2024-01-19 19:58:16 INFO  db - Cache hit for key user:profile
+2024-01-19 19:59:20 INFO  db - Database query completed in 42ms
+2024-01-19 20:00:55 WARNING app - Retry 1/3 for external payment API
+2024-01-19 20:02:05 INFO  api - Database query completed in 42ms
+2024-01-19 20:02:45 INFO  db - Scheduled job 'daily_report' finished
+2024-01-19 20:03:48 INFO  api - Database query completed in 42ms
+2024-01-19 20:04:29 INFO  api - User login succeeded
+2024-01-19 20:05:40 INFO  db - Config reloaded from config/app.json
+2024-01-19 20:07:08 INFO  worker - Cache hit for key user:profile
+2024-01-19 20:08:05 INFO  worker - User login succeeded
+2024-01-19 20:08:58 WARNING app - Slow query detected (1.8s)
+2024-01-19 20:10:25 INFO  api - Scheduled job 'daily_report' finished
+2024-01-19 20:11:39 INFO  worker - Cache hit for key user:profile
+2024-01-19 20:13:01 INFO  db - Scheduled job 'daily_report' finished
+2024-01-19 20:14:07 WARNING db - Deprecated endpoint /api/v1/orders called
+2024-01-19 20:15:07 ERROR TimeoutError: upstream call exceeded 5000ms
+2024-01-19 20:16:36 INFO  worker - User login succeeded
+2024-01-19 20:18:26 WARNING db - Retry 1/3 for external payment API
+2024-01-19 20:19:29 INFO  worker - Database query completed in 42ms
+2024-01-19 20:20:14 INFO  api - User login succeeded
+2024-01-19 20:21:16 INFO  worker - Database query completed in 42ms
+2024-01-19 20:22:39 INFO  worker - Cache hit for key user:profile
+2024-01-19 20:23:56 INFO  api - User login succeeded
+2024-01-19 20:25:01 INFO  app - Scheduled job 'daily_report' finished
+2024-01-19 20:26:17 INFO  db - Database query completed in 42ms
+2024-01-19 20:27:03 INFO  app - User login succeeded
+2024-01-19 20:27:50 INFO  db - Database query completed in 42ms
+2024-01-19 20:28:31 INFO  api - User login succeeded
+2024-01-19 20:29:12 INFO  worker - Scheduled job 'daily_report' started
+2024-01-19 20:29:53 INFO  app - Database query completed in 42ms
+2024-01-19 20:31:00 INFO  app - Cache hit for key user:profile
+2024-01-19 20:31:46 INFO  db - Scheduled job 'daily_report' finished
+2024-01-19 20:32:55 INFO  db - Request handled successfully
+2024-01-19 20:34:45 INFO  app - Cache hit for key user:profile
+2024-01-19 20:35:50 INFO  api - User login succeeded
+2024-01-19 20:36:32 WARNING api - Deprecated endpoint /api/v1/orders called
+2024-01-19 20:37:57 INFO  api - Database query completed in 42ms
+2024-01-19 20:38:57 WARNING app - Connection pool usage at 85%
+2024-01-19 20:40:17 INFO  api - User login succeeded
+2024-01-19 20:41:30 WARNING api - Response payload exceeds 1MB
+2024-01-19 20:42:56 INFO  app - User login succeeded
+2024-01-19 20:44:33 INFO  app - Scheduled job 'daily_report' started
+2024-01-19 20:45:25 ERROR AuthenticationError: invalid bearer token for client C0017
+2024-01-19 20:46:20 INFO  worker - Config reloaded from config/app.json
+2024-01-19 20:47:58 INFO  db - Scheduled job 'daily_report' started
+2024-01-19 20:48:58 INFO  db - Scheduled job 'daily_report' finished
+2024-01-19 20:50:18 WARNING app - Retry 1/3 for external payment API
+2024-01-19 20:52:08 ERROR DatabaseConnectionError: connection to db-primary:5432 refused
+2024-01-19 20:53:23 INFO  api - Request handled successfully
+2024-01-19 20:55:04 INFO  api - Scheduled job 'daily_report' started
+2024-01-19 20:56:02 INFO  api - Scheduled job 'daily_report' started
+2024-01-19 20:57:33 INFO  app - Scheduled job 'daily_report' finished
+2024-01-19 20:58:27 INFO  api - Database query completed in 42ms
+2024-01-19 21:00:02 INFO  api - Scheduled job 'daily_report' started
+2024-01-19 21:00:49 INFO  app - Config reloaded from config/app.json
+2024-01-19 21:02:27 INFO  worker - User login succeeded
+2024-01-19 21:03:11 INFO  app - User login succeeded
+2024-01-19 21:04:17 INFO  api - Database query completed in 42ms
+2024-01-19 21:05:31 INFO  worker - Scheduled job 'daily_report' finished
+2024-01-19 21:07:13 INFO  db - Database query completed in 42ms
+2024-01-19 21:08:35 INFO  db - Cache hit for key user:profile
+2024-01-19 21:09:53 INFO  api - Config reloaded from config/app.json
+2024-01-19 21:11:23 INFO  worker - Database query completed in 42ms
+2024-01-19 21:12:40 INFO  db - Scheduled job 'daily_report' finished
+2024-01-19 21:14:25 INFO  db - Cache hit for key user:profile
+2024-01-19 21:15:44 INFO  db - Cache hit for key user:profile
+2024-01-19 21:17:07 WARNING db - Response payload exceeds 1MB
+2024-01-19 21:18:10 INFO  db - User login succeeded
+2024-01-19 21:19:09 INFO  app - Scheduled job 'daily_report' started
+2024-01-19 21:20:22 INFO  worker - Request handled successfully
+2024-01-19 21:21:35 INFO  db - Config reloaded from config/app.json
+2024-01-19 21:23:08 INFO  db - Database query completed in 42ms
+2024-01-19 21:24:16 WARNING app - Response payload exceeds 1MB
+2024-01-19 21:24:57 INFO  db - Database query completed in 42ms
+2024-01-19 21:25:43 INFO  app - Config reloaded from config/app.json
+2024-01-19 21:27:26 INFO  worker - User login succeeded
+2024-01-19 21:28:10 INFO  app - User login succeeded
+2024-01-19 21:29:05 INFO  worker - Request handled successfully
+2024-01-19 21:29:48 INFO  app - Config reloaded from config/app.json
+2024-01-19 21:31:32 INFO  db - Scheduled job 'daily_report' finished
+2024-01-19 21:33:14 INFO  app - Request handled successfully
+2024-01-19 21:34:04 INFO  app - User login succeeded
+2024-01-19 21:35:00 INFO  api - Scheduled job 'daily_report' finished
+2024-01-19 21:36:05 INFO  db - User login succeeded
+2024-01-19 21:37:12 ERROR DatabaseConnectionError: connection to db-primary:5432 refused
+2024-01-19 21:38:22 INFO  api - Config reloaded from config/app.json
+2024-01-19 21:39:58 INFO  api - Scheduled job 'daily_report' finished
+2024-01-19 21:41:06 INFO  worker - Request handled successfully
+2024-01-19 21:42:03 INFO  worker - Scheduled job 'daily_report' finished
+2024-01-19 21:43:15 INFO  api - Database query completed in 42ms
+2024-01-19 21:44:09 INFO  db - Scheduled job 'daily_report' finished
+2024-01-19 21:45:06 INFO  api - Scheduled job 'daily_report' finished
+2024-01-19 21:46:25 INFO  worker - Scheduled job 'daily_report' finished
+2024-01-19 21:47:07 INFO  db - Request handled successfully
+2024-01-19 21:48:15 INFO  api - Scheduled job 'daily_report' finished
+2024-01-19 21:49:37 INFO  db - Request handled successfully
+2024-01-19 21:51:11 INFO  worker - User login succeeded
+2024-01-19 21:52:34 INFO  db - User login succeeded
+2024-01-19 21:53:21 INFO  db - Cache hit for key user:profile
+2024-01-19 21:54:41 INFO  db - Cache hit for key user:profile
+2024-01-19 21:56:23 WARNING db - Connection pool usage at 85%
+2024-01-19 21:57:34 INFO  api - Scheduled job 'daily_report' finished
+2024-01-19 21:58:24 INFO  app - Cache hit for key user:profile
+2024-01-19 21:59:47 INFO  worker - User login succeeded
+2024-01-19 22:00:48 INFO  db - Scheduled job 'daily_report' started
+2024-01-19 22:02:35 ERROR ValidationError: field 'email' failed format check
+2024-01-19 22:04:16 INFO  worker - Scheduled job 'daily_report' finished
+2024-01-19 22:05:02 ERROR TimeoutError: upstream call exceeded 5000ms
+2024-01-19 22:06:39 INFO  db - Cache hit for key user:profile
+2024-01-19 22:07:25 INFO  db - Config reloaded from config/app.json
+2024-01-19 22:08:12 INFO  worker - Config reloaded from config/app.json
+2024-01-19 22:09:16 INFO  worker - Config reloaded from config/app.json
+2024-01-19 22:10:36 WARNING db - Response payload exceeds 1MB
+2024-01-19 22:11:59 INFO  app - Database query completed in 42ms
+2024-01-19 22:13:38 WARNING app - Response payload exceeds 1MB
+2024-01-19 22:15:00 INFO  app - Request handled successfully
+2024-01-19 22:16:44 WARNING app - Connection pool usage at 85%
+2024-01-19 22:18:24 INFO  app - Request handled successfully
+2024-01-19 22:19:13 WARNING db - Connection pool usage at 85%
+2024-01-19 22:20:20 WARNING api - Connection pool usage at 85%
+2024-01-19 22:21:44 INFO  worker - Request handled successfully
+2024-01-19 22:23:15 INFO  worker - User login succeeded
+2024-01-19 22:24:58 WARNING app - Retry 1/3 for external payment API
+2024-01-19 22:26:28 INFO  worker - Database query completed in 42ms
+2024-01-19 22:28:02 INFO  worker - Config reloaded from config/app.json
+2024-01-19 22:29:43 WARNING api - Deprecated endpoint /api/v1/orders called
+2024-01-19 22:30:25 WARNING app - Response payload exceeds 1MB
+2024-01-19 22:32:06 INFO  app - Scheduled job 'daily_report' finished
+2024-01-19 22:33:49 WARNING api - Deprecated endpoint /api/v1/orders called
+2024-01-19 22:35:31 INFO  api - Request handled successfully
+2024-01-19 22:36:39 INFO  app - Cache hit for key user:profile
+2024-01-19 22:38:28 INFO  db - Scheduled job 'daily_report' finished
+2024-01-19 22:39:40 INFO  app - Scheduled job 'daily_report' started
+2024-01-19 22:40:54 INFO  db - Cache hit for key user:profile
