@@ -1,0 +1,13 @@
+# 第 10 章 · 智能体通信协议（MCP / A2A / ANP）专用依赖
+# 与项目根 requirements.txt（hello-agents==0.2.9 等）共用同一 .venv，本文件只列本章新增项。
+# 安装：pip install -r requirements.txt   （在本目录下执行）
+#
+# ⚠️ 版本约束（实测 2026-09-17，勿随意升级）：
+#   fastmcp <3    —— hello-agents[protocols] extras 声明 <3.0.0；3.x/4.x API 不兼容
+#   a2a-sdk <1.0  —— 1.x 移除了顶层 a2a.client.A2AClient，框架探测失败会误报"未安装"
+#   protobuf ~5.29 —— a2a-sdk 会拉 7.x 砸 autogen-core（第 4 章）；装完必须回钉本版本
+
+fastmcp==2.14.7
+a2a-sdk==0.3.26
+protobuf==5.29.6
+flask==3.1.3
