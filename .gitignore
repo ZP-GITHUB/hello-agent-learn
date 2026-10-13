@@ -50,3 +50,18 @@ __pycache__/
 /9-agent-demos/**/node_modules/
 /9-agent-demos/**/__pycache__/
 /9-agent-demos/**/dist/
+# 深度研究助手（chapter14）运行时会话笔记：NoteTool 的 NOTES_WORKSPACE 产物
+/9-agent-demos/**/notes/
+
+# ---------------------------------------------------------------------------
+# 第 15 章外部案例（赛博小镇 Helloagents-AI-Town）
+#   backend 无自带 .gitignore（.env 由上面的 **/.env 兜底）；
+#   helloagents-ai-town/.gitignore 已忽略 Godot 的 .godot/；
+#   这里补运行期产物：对话日志、uvicorn/pytest 缓存
+# ---------------------------------------------------------------------------
+/9-agent-demos/Helloagents-AI-Town/backend/logs/
+/9-agent-demos/Helloagents-AI-Town/**/.pytest_cache/
+# ⚠️ backend/memory_data/<NPC>/memory.db 是上游随代码分发的演示数据，
+#    刻意保持「被跟踪」（与上游一致）。但它们是 SQLite，**运行时会写入**，
+#    每次和 NPC 对话后 git status 都会变脏 —— 这是预期行为，不要提交这些改动，
+#    需要还原时执行：git checkout -- 9-agent-demos/Helloagents-AI-Town/backend/memory_data
